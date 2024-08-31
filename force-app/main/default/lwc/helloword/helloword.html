@@ -1,3 +1,7 @@
 <template>
-    Hello {!greetings}
+    <h3>Enter your name</h3>
+    <lightning-input name="firstname" label="First Name:" onchange={handleChange}></lightning-input>
+    <lightning-input name="lastname" label="Last Name:" onchange={handleChange}></lightning-input>
+    Output name : {concatname}
+    <c-api-decorator-sample-child-component message="Anand is greate" handlemyclick=""></c-api-decorator-sample-child-component>
 </template>
