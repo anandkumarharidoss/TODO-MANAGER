@@ -1,0 +1,12 @@
+<template>
+    <lightning-input name="firstname" id="firstname" label="First Name" onchange={changeFirstNameHandler}></lightning-input>
+    <lightning-input name="lastname" id="lastname" label="Last Name" onchange={changeLastNameHandler}></lightning-input>
+    <lightning-button name="submit" label="Submit" onclick={changeSubmitHandler}></lightning-button>
+    <template if:true={isflag}>
+        <span>{fullname}</span>
+    </template>    
+    <template if:false={isflag}>
+        <p>The content is not visible.</p>
+    </template>
+
+</template>

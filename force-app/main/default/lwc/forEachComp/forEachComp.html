@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="For Each" icon-name="standard:account">
+        <template for:each={contacts} for:item="contact">
+            <p key={contact.Id}>{contact.Name}</p>
+        </template>
+        <template iterator:it={contacts}>
+            <li key={it.value.Id}>
+                <div if:true={it.first} class="bgred"></div>
+                    {it.value.Name},  {it.value.Title}
+                <div if:true={it.last} class="bgorg"></div>
+            </li>    
+        </template>
+    </lightning-card>
+</template>
